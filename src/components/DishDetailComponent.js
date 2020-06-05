@@ -3,10 +3,6 @@ import {Card,CardImg,CardImgOverlay,CardText,CardBody,CardTitle} from 'reactstra
 
 class DishDetail extends Component{
     
-    constructor(props){
-        super(props);
-    }
-    
     renderDish(dish){
         if(dish!=null){
             return(
@@ -25,14 +21,17 @@ class DishDetail extends Component{
             );
         }
     }
-    renderComments(){
-        const commentsList=this.props.dish.comments.map((comment)=>{
+    renderComments(comments){
+        const commentsList=comments.map((comment)=>{
             return(
                 <li key={comment.id}>
-                    {comment.comment}
+                    <p>
+                        {comment.comment}
+                        <br></br>
+                        --{comment.author}{" , "}{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
+                    </p>
                     <br></br>
-                    --{comment.author}{comment.date}
-                    <br></br>
+                   
                 </li>
             );
         });
@@ -50,14 +49,16 @@ class DishDetail extends Component{
     render(){
         if(this.props.dish){
             return(
-                <div class="row">
-                    <div class="col-12 col-md-5 m-1">
-                        {this.renderDish(this.props.dish)}
-                    </div>
-                    <div class="col-12 col-md-5 m-1">
-                        {this.renderComments()}
-                    </div>
-                </div>
+                <div className="container">
+                    <div class="row">
+                        <div class="col-12 col-md-5 m-1">
+                            {this.renderDish(this.props.dish)}
+                        </div>
+                        <div class="col-12 col-md-5 m-1">
+                            {this.renderComments(this.props.dish.comments)}
+                        </div>
+                    </div>  
+                </div> 
             );
         }
         else{
