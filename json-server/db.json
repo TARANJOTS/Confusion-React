@@ -271,6 +271,39 @@
       "message": "afadsfds",
       "date": "2017-12-04T09:41:49.890Z",
       "id": 1
+    },
+    {
+      "date": "2020-06-19T15:03:54.117Z",
+      "firstname": "Taranjot ",
+      "lastname": "Singh",
+      "telnum": "1234856975",
+      "email": "abc@pl.ok",
+      "agree": true,
+      "contactType": "Email",
+      "message": "This is test.",
+      "id": 2
+    },
+    {
+      "date": "2020-06-19T15:03:59.056Z",
+      "firstname": "",
+      "lastname": "",
+      "telnum": "",
+      "email": "",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "",
+      "id": 3
+    },
+    {
+      "firstname": "Taranjot",
+      "lastname": "Singh",
+      "telnum": "9876543210",
+      "email": "abc@rp.il",
+      "agree": true,
+      "contactType": "Email",
+      "message": "This is a test",
+      "date": "2020-06-19T15:25:39.450Z",
+      "id": 4
     }
   ]
 }

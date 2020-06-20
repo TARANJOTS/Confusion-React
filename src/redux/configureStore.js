@@ -10,8 +10,7 @@ import { InitialFeedback } from './forms';
 
 
 export const ConfigureStore = () => {
-    const store = createStore
-        (combineReducers({
+    const store = createStore(combineReducers({
             dishes: Dishes,
             comments: Comments,
             promotions: Promotions,
